@@ -21,12 +21,16 @@
         --primary-rgb: 60, 180, 116;
         --black: #000;
         --white: #fff;
+        --white-blue: #f9fcfd;
 
         // header
         --header-height: 70px;
 
-        // default layout
-        --default-layout-width: 1150px;
+        // footer height
+        --footer-height: 60px;
+
+        // layout default
+        --layout-default-width: 1150px;
     }
 
     * {
@@ -48,11 +52,17 @@
         margin: 0;
         width: 100vw;
         height: 100vh;
-        // background-color: var(--black);
+        background-color: var(--white-blue);
 
-        #app {
+        #app,
+        .app {
             width: inherit;
             height: inherit;
         }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 </style>

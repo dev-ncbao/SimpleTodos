@@ -1,7 +1,7 @@
 <template>
     <layout-default-dynamic>
         <div :class="cx.wrapper">
-            <h1>Hello Vue</h1>
+            <h1>About</h1>
         </div>
     </layout-default-dynamic>
 </template>

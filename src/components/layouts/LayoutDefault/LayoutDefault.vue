@@ -1,8 +1,14 @@
 <template>
     <div :class="cx.wrapper">
-        <Header></Header>
-        <slot></slot>
-        <Footer></Footer>
+        <div :class="cx.headerWrapper">
+            <Header></Header>
+        </div>
+        <div :class="cx.contentWrapper">
+            <slot></slot>
+        </div>
+        <div :class="cx.footerWrapper">
+            <Footer></Footer>
+        </div>
     </div>
 </template>
 
@@ -13,10 +19,32 @@
 
 <style lang="scss" module="cx">
     .wrapper {
-        width: var(--default-layout-width);
+        width: inherit;
+        height: inherit;
         margin: 0 auto 0;
         display: flex;
         flex-direction: column;
-        background-color: #f5f5f5;
+        align-items: center;
+
+        .headerWrapper,
+        .footerWrapper {
+            width: inherit;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .headerWrapper {
+            box-shadow: 0 1px 1.5px 1px #e5e5e5;
+        }
+
+        .contentWrapper {
+            flex: 1;
+            background-color: var(--white-blue);
+        }
+
+        .footerWrapper {
+            box-shadow: 0 -1px 1.5px 1px #e5e5e5;
+        }
     }
 </style>
