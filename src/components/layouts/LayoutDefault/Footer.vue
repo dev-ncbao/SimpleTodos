@@ -8,8 +8,11 @@
 
 <style lang="scss" module="cx">
     .wrapper {
-        width: var(--layout-default-width);
+        width: calc(
+            var(--layout-default-width) + var(--app-small-padding-horizontal)
+        );
         height: var(--footer-height);
+        padding: 0 var(--app-padding-horizontal);
         display: flex;
         justify-content: center;
         align-items: center;

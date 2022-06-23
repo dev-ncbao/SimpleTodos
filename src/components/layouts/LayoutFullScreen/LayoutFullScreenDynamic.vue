@@ -1,5 +1,16 @@
-<template></template>
+<template>
+    <slot></slot>
+</template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+    import LayoutFullScreen from './LayoutFullScreen.vue'
 
-<style lang="scss" module="cx"></style>
+    const emits = defineEmits(['update:layout'])
+    emits('update:layout', LayoutFullScreen)
+</script>
+
+<script lang="ts">
+    export default {
+        inheritAttrs: false,
+    }
+</script>

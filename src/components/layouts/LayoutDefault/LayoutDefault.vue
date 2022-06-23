@@ -3,7 +3,7 @@
         <div :class="cx.headerWrapper">
             <Header></Header>
         </div>
-        <div :class="cx.contentWrapper">
+        <div :class="cx.mainWrapper">
             <slot></slot>
         </div>
         <div :class="cx.footerWrapper">
@@ -32,13 +32,14 @@
             display: flex;
             justify-content: center;
             z-index: 100;
+            background-color: var(--white);
         }
 
         .headerWrapper {
             box-shadow: 0 1px 1.5px 1px #e5e5e5;
         }
 
-        .contentWrapper {
+        .mainWrapper {
             flex: 1;
             background-color: var(--white-blue);
         }

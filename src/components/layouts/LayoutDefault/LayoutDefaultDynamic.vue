@@ -3,11 +3,14 @@
 </template>
 
 <script setup lang="ts">
-    import LayoutDefaultVue from './LayoutDefault.vue'
+    import LayoutDefault from './LayoutDefault.vue'
 
-    const props = defineProps(['layout'])
+    const emits = defineEmits(['update:layout'])
+    emits('update:layout', LayoutDefault)
+</script>
 
-    const emit = defineEmits(['update:layout'])
-
-    emit('update:layout', LayoutDefaultVue)
+<script lang="ts">
+    export default {
+        inheritAttrs: false,
+    }
 </script>
